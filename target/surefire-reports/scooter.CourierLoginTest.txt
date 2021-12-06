@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: scooter.CourierLoginTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 65.349 s <<< FAILURE! - in scooter.CourierLoginTest
+courierCanNotLoginWithoutPassword(scooter.CourierLoginTest)  Time elapsed: 60.397 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Cannot invoke the path method because no content-type was present in the response and no default parser has been set.
+
+You can specify a default parser using e.g.:
+RestAssured.defaultParser = Parser.JSON;
+
+	at scooter.CourierLoginTest.courierCanNotLoginWithoutPassword(CourierLoginTest.java:110)
+
