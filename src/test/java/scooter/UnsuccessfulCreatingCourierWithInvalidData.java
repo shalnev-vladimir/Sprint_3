@@ -46,3 +46,4 @@ public class UnsuccessfulCreatingCourierWithInvalidData {
         assertThat(bodyErrorMessage, equalTo("Недостаточно данных для создания учетной записи"));
     }
 }
+//test
