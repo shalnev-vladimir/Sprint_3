@@ -14,7 +14,7 @@ public class OrderClient extends RestAssuredClient {
     // создание заказа
     @DisplayName("Check if it's possible to create an order")
     @Description("Basic positive test that validate you are allowed to order scooter with any available color")
-    @Step("Sends POST request to /api/v1/orders endpoint")
+    @Step("Sends POST request to " + ORDER_PATH + " endpoint")
     public ValidatableResponse createOrder(NewOrderData newOrderData) {
         return given()
                 .spec(getBaseSpec())

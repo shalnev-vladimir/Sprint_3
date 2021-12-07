@@ -1,0 +1,5 @@
+scooter\CreateCourierTest.class
+scooter\CourierLoginTest.class
+scooter\UnsuccessfulCreatingCourierWithInvalidData.class
+scooter\CreatingOrderTest.class
+scooter\GetOrderListTest.class

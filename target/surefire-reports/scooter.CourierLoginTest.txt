@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: scooter.CourierLoginTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 67.028 s <<< FAILURE! - in scooter.CourierLoginTest
+courierCanNotLoginWithoutPassword(scooter.CourierLoginTest)  Time elapsed: 60.393 s  <<< FAILURE!
+java.lang.AssertionError: 
+В приложении возможна авторизация без пароля
+Expected: <400>
+     but: was <504>
+	at scooter.CourierLoginTest.courierCanNotLoginWithoutPassword(CourierLoginTest.java:110)
+

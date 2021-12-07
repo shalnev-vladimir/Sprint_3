@@ -13,7 +13,7 @@ public class OrderListClient extends RestAssuredClient{
 
     @DisplayName("Check if it's possible to get list of orders")
     @Description("Positive test that returns orders list")
-    @Step("Sends GET request to /api/v1/courier endpoint")
+    @Step("Sends GET request to " + ORDER_PATH + " endpoint")
     public ValidatableResponse orderList() {
         return given()
                 .spec(getBaseSpec())

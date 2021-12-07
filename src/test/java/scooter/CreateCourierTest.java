@@ -84,17 +84,14 @@ public class CreateCourierTest {
     }
 
     @Test
-    @Description("Проверяет, что успешный запрос возвращает код ответа 200.")
+    @Description("Проверяет, что в теле ответа возвращается ok: true")
     public void checkSuccessRequestReturnsOkTrueTest() {
-
-        String responseBody = "{\"ok\":true}";
 
         ValidatableResponse response = courierClient.create(courier);
         courierId = courierClient.login(CourierCredentials.from(courier));
 
         ResponseBodyExtractionOptions body = response.extract().body();
 
-        assertEquals("Ожидаемое тело ответа: " + responseBody + ". Фактическое: " + body.asString(),
-                responseBody, body.asString());
+        assertTrue("Тело ответа не соответствует ожидаемому", body.jsonPath().getBoolean("ok"));
     }
 }

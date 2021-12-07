@@ -107,9 +107,9 @@ public class CourierLoginTest {
         courierId = courierClient.login(CourierCredentials.from(courier));
 
         int statusCode = response.extract().statusCode();
-        String errorMessage = response.extract().path("message");
-
         assertThat("В приложении возможна авторизация без пароля", statusCode, equalTo(400));
+
+        String errorMessage = response.extract().path("message");
         assertThat(errorMessage, equalTo("Недостаточно данных для входа"));
     }
 
